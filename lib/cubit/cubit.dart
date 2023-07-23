@@ -330,6 +330,7 @@ class AppCubit extends Cubit<AppStates> {
       loadDownValue!,
       gripDownValue!,
       activityDownValue!,
+      DateTime.now().millisecondsSinceEpoch,
     );
   }
 

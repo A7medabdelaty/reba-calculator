@@ -16,6 +16,7 @@ class DataModel {
   int loadValue;
   int gripValue;
   int activityValue;
+  int date;
 
   DataModel(
     this.neckValue,
@@ -33,6 +34,7 @@ class DataModel {
     this.loadValue,
     this.gripValue,
     this.activityValue,
+    this.date,
   );
 
   DataModel.fromJson(Map<String, dynamic> json)
@@ -52,6 +54,7 @@ class DataModel {
           json['loadValue'],
           json['gripValue'],
           json['activityValue'],
+          json['date'],
         );
 
   Map<String, dynamic> toJson() {
@@ -71,6 +74,7 @@ class DataModel {
       'loadValue': loadValue,
       'gripValue': gripValue,
       'activityValue': activityValue,
+      'date': date,
     };
   }
 }

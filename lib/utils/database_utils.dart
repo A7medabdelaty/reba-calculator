@@ -28,7 +28,8 @@ class DatabaseUtils {
   }
 
   static Future<List<ResultModel>> getResultsData() async {
-    QuerySnapshot<ResultModel> resultData = await getResultsCollection().get();
+    QuerySnapshot<ResultModel> resultData =
+        await getResultsCollection().orderBy('date').get();
     return resultData.docs.map((e) => e.data()).toList();
   }
 
@@ -37,7 +38,8 @@ class DatabaseUtils {
   }
 
   static Future<List<DataModel>> getData() async {
-    QuerySnapshot<DataModel> data = await getDataCollection().get();
+    QuerySnapshot<DataModel> data =
+        await getDataCollection().orderBy('date').get();
     return data.docs.map((e) {
       return e.data();
     }).toList();
