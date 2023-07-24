@@ -29,7 +29,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home: const AppLayout(),
+      home: const Directionality(
+        textDirection: TextDirection.rtl,
+        child: AppLayout(),
+      ),
     );
   }
 }

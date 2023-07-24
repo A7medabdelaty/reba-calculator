@@ -1,6 +1,7 @@
-# al_araby
+# REBA-Calculator
 
-A new Flutter project.
+application to calculate REBA method
+for more visit: https://nawo-solution.com/reba-method/
 
 ## Getting Started
 

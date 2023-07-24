@@ -72,7 +72,7 @@ class _LegViewState extends State<LegView> {
                   const SizedBox(
                     width: 150,
                     child: Text(
-                      'Flexion is between 30 and 60',
+                      'انثناء الركبه من الخلف بين زاوية 30 وزاوية 60؟',
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.center,
                     ),
@@ -96,7 +96,7 @@ class _LegViewState extends State<LegView> {
                   const SizedBox(
                     width: 150,
                     child: Text(
-                      'Flexion is greater than 60',
+                      'انثناء الركبه من الخلف أكبر من زاوية 60؟',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16),
                     ),

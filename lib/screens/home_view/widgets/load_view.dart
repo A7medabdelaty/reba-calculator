@@ -16,7 +16,7 @@ class _LoadViewState extends State<LoadView> {
     return Row(
       children: [
         const Text(
-          'load value',
+          'قيمة الحمل',
           style: TextStyle(fontSize: 18),
         ),
         const SizedBox(
@@ -32,19 +32,19 @@ class _LoadViewState extends State<LoadView> {
               dropdownColor: Colors.white,
               alignment: Alignment.center,
               value: widget.cubit.loadDownValue,
-              hint: const Text('choose'),
+              hint: const Text('اختار'),
               items: const [
                 DropdownMenuItem(
                   value: 1,
-                  child: Text("Load less than 5kg"),
+                  child: Text("الحمل اقل من 5 كجم"),
                 ),
                 DropdownMenuItem(
                   value: 2,
-                  child: Text("Load between 5kg and 10kg"),
+                  child: Text("الحمل بين 5 كجم و10 كجم"),
                 ),
                 DropdownMenuItem(
                   value: 3,
-                  child: Text("Load greater than 10kg"),
+                  child: Text("الحمل أكثر من 10كجم"),
                 ),
               ],
               onChanged: (value) {

@@ -127,7 +127,7 @@ class _ShoulderViewState extends State<ShoulderView> {
               Column(
                 children: [
                   const Text(
-                    'shoulder raised?',
+                    'مفصل الكتف مرفوع؟',
                     style: TextStyle(fontSize: 16),
                   ),
                   Checkbox(
@@ -145,7 +145,7 @@ class _ShoulderViewState extends State<ShoulderView> {
               Column(
                 children: [
                   const Text(
-                    'shoulder abducted?',
+                    'مفصل الكتف بعيد عن الجسم؟',
                     style: TextStyle(fontSize: 16),
                   ),
                   Checkbox(

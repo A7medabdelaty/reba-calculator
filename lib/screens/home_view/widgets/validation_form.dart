@@ -26,11 +26,11 @@ class _ValidationFormState extends State<ValidationForm> {
               border: OutlineInputBorder(),
               contentPadding:
                   EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-              label: Text("User Name"),
+              label: Text("اسم المستخدم"),
             ),
             validator: (value) {
               if (value!.isEmpty) {
-                return "This field is required";
+                return "هذا الحقل مطلوب";
               } else {
                 return null;
               }
@@ -46,11 +46,11 @@ class _ValidationFormState extends State<ValidationForm> {
               border: OutlineInputBorder(),
               contentPadding:
                   EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-              label: Text("SAP Number"),
+              label: Text("رقم الساب"),
             ),
             validator: (value) {
               if (value!.isEmpty) {
-                return "This field is required";
+                return "هذا الحقل مطلوب";
               } else {
                 return null;
               }
@@ -67,12 +67,12 @@ class _ValidationFormState extends State<ValidationForm> {
               contentPadding:
                   EdgeInsets.symmetric(vertical: 20, horizontal: 15),
               label: Text(
-                "Process ID",
+                "رقم العملية",
               ),
             ),
             validator: (value) {
               if (value!.isEmpty) {
-                return "This field is required";
+                return "هذا الحقل مطلوب";
               } else {
                 return null;
               }
@@ -95,7 +95,7 @@ class _ValidationFormState extends State<ValidationForm> {
                   onPressed: () {
                     widget.cubit.resetFormValues();
                   },
-                  child: const Text("Reset"),
+                  child: const Text("اعادة"),
                 ),
               ),
               const SizedBox(
@@ -132,7 +132,7 @@ class _ValidationFormState extends State<ValidationForm> {
                       }
                     }
                   },
-                  child: const Text("Calculate"),
+                  child: const Text("احسب"),
                 ),
               ),
             ],

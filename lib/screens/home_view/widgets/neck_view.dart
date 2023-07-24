@@ -89,7 +89,7 @@ class _NeckViewState extends State<NeckView> {
               Column(
                 children: [
                   const Text(
-                    'Twisted Or Bending',
+                    'يوجد التواء او انحناء جانبى الرقبة؟',
                     style: TextStyle(fontSize: 16),
                   ),
                   Checkbox(

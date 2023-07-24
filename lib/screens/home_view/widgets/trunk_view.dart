@@ -146,7 +146,7 @@ class _TrunkViewState extends State<TrunkView> {
               Column(
                 children: [
                   const Text(
-                    'Twisted Or Bending',
+                    'يوجد التواء او انحناء جانبى للظهر؟',
                     style: TextStyle(fontSize: 16),
                   ),
                   Checkbox(

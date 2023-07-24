@@ -16,7 +16,7 @@ class _ActivityViewState extends State<ActivityView> {
     return Row(
       children: [
         const Text(
-          'activity value',
+          'التكرارية',
           style: TextStyle(fontSize: 18),
         ),
         const SizedBox(
@@ -33,16 +33,16 @@ class _ActivityViewState extends State<ActivityView> {
               dropdownColor: Colors.white,
               alignment: Alignment.center,
               value: widget.cubit.activityDownValue,
-              hint: const Text('choose'),
+              hint: const Text('اختار'),
               items: const [
                 DropdownMenuItem(
                   value: 1,
-                  child: Text("posture is static ( > 1min)"),
+                  child: Text("الثبات على وضع معين لأكثر من دقيقة"),
                 ),
                 DropdownMenuItem(
                   value: 2,
                   child: Text(
-                    "posture is repeated more than 4 times per minute",
+                    "عمل متكرر متغير أكثر من 4 مرات لكل دقيقة",
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -50,7 +50,7 @@ class _ActivityViewState extends State<ActivityView> {
                 DropdownMenuItem(
                   value: 3,
                   child: Text(
-                    "there is a quick and wide change of posture or unstable base",
+                    "عمل متحرك غير ثابت سريع",
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),

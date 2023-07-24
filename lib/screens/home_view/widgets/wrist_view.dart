@@ -91,7 +91,7 @@ class _WristViewState extends State<WristView> {
                   const SizedBox(
                     width: 140,
                     child: Text(
-                      'if ulnar / radial wrist deviation',
+                      'انحراف فى الرسغ داخلى او خارجى؟',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16),
                     ),

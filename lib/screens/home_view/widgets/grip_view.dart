@@ -16,7 +16,7 @@ class _GripViewState extends State<GripView> {
     return Row(
       children: [
         const Text(
-          'grip value',
+          'نوعية القبضة',
           style: TextStyle(fontSize: 18),
         ),
         const SizedBox(
@@ -33,23 +33,23 @@ class _GripViewState extends State<GripView> {
               dropdownColor: Colors.white,
               alignment: Alignment.center,
               value: widget.cubit.gripDownValue,
-              hint: const Text('choose'),
+              hint: const Text('اختار'),
               items: const [
                 DropdownMenuItem(
                   value: 1,
-                  child: Text("hand hold is good with handles"),
+                  child: Text("قبضة جيدة"),
                 ),
                 DropdownMenuItem(
                   value: 2,
-                  child: Text("hand hold is acceptable"),
+                  child: Text("قبضة مقبولة"),
                 ),
                 DropdownMenuItem(
                   value: 3,
-                  child: Text("hand hold is not acceptable but possible"),
+                  child: Text("قبضة غير مقبولة"),
                 ),
                 DropdownMenuItem(
                   value: 4,
-                  child: Text("hand hold is dangerous"),
+                  child: Text("عدم التمكن من الإمساك بالاشياء"),
                 ),
               ],
               onChanged: (value) {
