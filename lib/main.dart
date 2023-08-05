@@ -15,7 +15,7 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   runApp(
     BlocProvider(
-      create: (context) => AppCubit()..getExcelData(),
+      create: (context) => AppCubit(),
       child: const MyApp(),
     ),
   );

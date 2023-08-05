@@ -1,24 +1,24 @@
 class DataModel {
   static String collectionName = 'data';
 
-  int neckValue;
-  int trunkValue;
-  int legValue;
-  int elbowValue;
-  int shoulderValue;
-  int wristValue;
+  int neckPoints;
+  int trunkPoints;
+  int legPoints;
+  int elbowPoints;
+  int shoulderPoints;
+  int wristPoints;
   int loadValue;
   int gripValue;
   int activityValue;
   int date;
 
   DataModel(
-    this.neckValue,
-    this.trunkValue,
-    this.legValue,
-    this.elbowValue,
-    this.shoulderValue,
-    this.wristValue,
+    this.neckPoints,
+    this.trunkPoints,
+    this.legPoints,
+    this.elbowPoints,
+    this.shoulderPoints,
+    this.wristPoints,
     this.loadValue,
     this.gripValue,
     this.activityValue,
@@ -41,12 +41,12 @@ class DataModel {
 
   Map<String, dynamic> toJson() {
     return {
-      'neckValue': neckValue,
-      'trunkValue': trunkValue,
-      'legValue': legValue,
-      'elbowValue': elbowValue,
-      'shoulderValue': shoulderValue,
-      'wristValue': wristValue,
+      'neckValue': neckPoints,
+      'trunkValue': trunkPoints,
+      'legValue': legPoints,
+      'elbowValue': elbowPoints,
+      'shoulderValue': shoulderPoints,
+      'wristValue': wristPoints,
       'loadValue': loadValue,
       'gripValue': gripValue,
       'activityValue': activityValue,

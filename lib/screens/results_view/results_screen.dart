@@ -11,14 +11,29 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    late final List<ResultModel> myList;
-
+    late List<ResultModel> myList;
     return BlocBuilder<AppCubit, AppStates>(
       builder: (context, state) {
+        AppCubit cubit = AppCubit.get(context);
         return Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              AppCubit.saveToExcel(myList);
+              try {
+                cubit
+                    .getExcelData()
+                    .then((value) => AppCubit.saveToExcel(myList));
+              } catch (e) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(e.toString()),
+                  ),
+                );
+              }
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Saved Successfully'),
+                ),
+              );
             },
             child: const Icon(Icons.save),
           ),

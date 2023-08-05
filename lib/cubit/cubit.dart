@@ -315,18 +315,12 @@ class AppCubit extends Cubit<AppStates> {
     );
 
     resultData = DataModel(
-      int.parse(neckRadio!),
-      neckCheckBox,
-      int.parse(trunkRadio!),
-      trunkCheckBox,
-      int.parse(legRadio!),
-      int.parse(legRadio2 ?? 'normal'),
-      int.parse(elbowRadio!),
-      int.parse(shoulderRadio!),
-      shoulderCheckBox1,
-      shoulderCheckBox2,
-      int.parse(wristRadio!),
-      wristCheckBox,
+      neckPoints,
+      trunkPoints,
+      legPoints,
+      elbowPoints,
+      shoulderPoints,
+      wristPoints,
       loadDownValue!,
       gripDownValue!,
       activityDownValue!,
@@ -394,20 +388,14 @@ class AppCubit extends Cubit<AppStates> {
     sheet.getRangeByIndex(1, 6).setText("Time");
 
     sheet.getRangeByIndex(1, 7).setText("Neck");
-    sheet.getRangeByIndex(1, 8).setText("Twisted Neck");
-    sheet.getRangeByIndex(1, 9).setText("Trunk");
-    sheet.getRangeByIndex(1, 10).setText("Twisted Trunk");
-    sheet.getRangeByIndex(1, 11).setText("Leg");
-    sheet.getRangeByIndex(1, 12).setText("Leg Flexion");
-    sheet.getRangeByIndex(1, 13).setText("Elbow");
-    sheet.getRangeByIndex(1, 14).setText("Shoulder");
-    sheet.getRangeByIndex(1, 15).setText("Shoulder Raised");
-    sheet.getRangeByIndex(1, 16).setText("Shoulder Abducted");
-    sheet.getRangeByIndex(1, 17).setText("Wrist");
-    sheet.getRangeByIndex(1, 18).setText("Wrist Ulnar");
-    sheet.getRangeByIndex(1, 19).setText("Load");
-    sheet.getRangeByIndex(1, 20).setText("Grip");
-    sheet.getRangeByIndex(1, 21).setText("Activity");
+    sheet.getRangeByIndex(1, 8).setText("Trunk");
+    sheet.getRangeByIndex(1, 9).setText("Leg");
+    sheet.getRangeByIndex(1, 10).setText("Elbow");
+    sheet.getRangeByIndex(1, 11).setText("Shoulder");
+    sheet.getRangeByIndex(1, 12).setText("Wrist");
+    sheet.getRangeByIndex(1, 13).setText("Load");
+    sheet.getRangeByIndex(1, 14).setText("Grip");
+    sheet.getRangeByIndex(1, 15).setText("Activity");
 
     for (var i = 0; i < myList.length; i++) {
       final item = myList[i];
@@ -423,28 +411,19 @@ class AppCubit extends Cubit<AppStates> {
           );
     }
 
-    print('////////////////');
     for (var i = 0; i < dataList!.length; i++) {
-      print('***********');
-      print(dataList);
       final item = dataList![i];
-      sheet.getRangeByIndex(i + 2, 7).setNumber(item.neckValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 8).setText(item.twistedNeck.toString());
-      sheet.getRangeByIndex(i + 2, 9).setNumber(item.trunkValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 10).setText(item.twistedTrunk.toString());
-      sheet.getRangeByIndex(i + 2, 11).setNumber(item.legValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 12).setNumber(item.legFlexion.toDouble());
-      sheet.getRangeByIndex(i + 2, 13).setNumber(item.elbowValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 14).setNumber(item.shoulderValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 15).setText(item.shoulderRaised.toString());
+      sheet.getRangeByIndex(i + 2, 7).setNumber(item.neckPoints.toDouble());
+      sheet.getRangeByIndex(i + 2, 8).setNumber(item.trunkPoints.toDouble());
+      sheet.getRangeByIndex(i + 2, 9).setNumber(item.legPoints.toDouble());
+      sheet.getRangeByIndex(i + 2, 10).setNumber(item.elbowPoints.toDouble());
       sheet
-          .getRangeByIndex(i + 2, 16)
-          .setText(item.shoulderAbducted.toString());
-      sheet.getRangeByIndex(i + 2, 17).setNumber(item.wristValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 18).setText(item.wristUlnar.toString());
-      sheet.getRangeByIndex(i + 2, 19).setNumber(item.loadValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 20).setNumber(item.gripValue.toDouble());
-      sheet.getRangeByIndex(i + 2, 21).setNumber(item.activityValue.toDouble());
+          .getRangeByIndex(i + 2, 11)
+          .setNumber(item.shoulderPoints.toDouble());
+      sheet.getRangeByIndex(i + 2, 12).setNumber(item.wristPoints.toDouble());
+      sheet.getRangeByIndex(i + 2, 13).setNumber(item.loadValue.toDouble());
+      sheet.getRangeByIndex(i + 2, 14).setNumber(item.gripValue.toDouble());
+      sheet.getRangeByIndex(i + 2, 15).setNumber(item.activityValue.toDouble());
     }
 
     final List<int> bytes = workbook.saveAsStream();
