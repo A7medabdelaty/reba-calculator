@@ -2,7 +2,7 @@ import 'package:al_araby/cubit/cubit.dart';
 import 'package:flutter/material.dart';
 
 class LegView extends StatefulWidget {
-  const LegView(this.cubit, {super.key});
+  LegView(this.cubit, {super.key});
 
   final AppCubit cubit;
 
@@ -11,6 +11,8 @@ class LegView extends StatefulWidget {
 }
 
 class _LegViewState extends State<LegView> {
+  bool toggleable = true;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -79,9 +81,16 @@ class _LegViewState extends State<LegView> {
                   ),
                   Radio(
                     value: "30",
+                    toggleable: toggleable,
                     onChanged: (value) {
                       setState(() {
-                        widget.cubit.legRadio2 = value;
+                        if (widget.cubit.legRadio2 == value) {
+                          widget.cubit.legRadio2 = null;
+                          toggleable = false;
+                        }
+                        {
+                          widget.cubit.legRadio2 = value;
+                        }
                       });
                     },
                     groupValue: widget.cubit.legRadio2,
@@ -102,10 +111,17 @@ class _LegViewState extends State<LegView> {
                     ),
                   ),
                   Radio(
+                    toggleable: toggleable,
                     value: "60",
                     onChanged: (value) {
                       setState(() {
-                        widget.cubit.legRadio2 = value;
+                        if (widget.cubit.legRadio2 == value) {
+                          widget.cubit.legRadio2 = null;
+                          toggleable = false;
+                        }
+                        {
+                          widget.cubit.legRadio2 = value;
+                        }
                       });
                     },
                     groupValue: widget.cubit.legRadio2,
